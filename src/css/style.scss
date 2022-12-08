@@ -1,0 +1,39 @@
+@use "sass:math";
+@use "global" as *;
+
+// foundation
+@use "foundation/minireset";
+
+html {
+  font-size: 62.5%;
+  line-height: 1;
+}
+
+.section {
+  display: grid;
+
+  gap: 20px;
+}
+.section__item {
+  display: grid;
+
+  gap: 10px;
+}
+
+.txt-1 {
+  font-size: calc(100 / 1000 * 100vw);
+}
+.txt-2 {
+  font-size: fluid-font-size(10rem * 0.5, 10rem, 500px, 1000px);
+}
+.txt-3 {
+  font-size: clamp(var(--fsz-min), var(--fsz-fluid), var(--fsz-max));
+
+  --fsz: 1rem;
+  --fsz-fluid: (var(--fsz-min) + (100 - 50) * ((100vw - 500px) / (1000 - 500)));
+  --fsz-max: var(--fsz) * 10;
+  --fsz-min: var(--fsz) * 5;
+}
+.txt-4 {
+  font-size: fluid-font-size(10rem * 0.75, 10rem, 500px, 1000px);
+}

@@ -1,0 +1,34 @@
+//----------------------------------------------------------------
+//- 共通のレイアウトを継承
+//----------------------------------------------------------------
+extends /pug/layout/_default
+
+//----------------------------------------------------------------
+//- mainコンテンツを記述
+//----------------------------------------------------------------
+block content
+  .section
+    .section__item
+      .section__head
+        | .txt-1 vwのみ
+      .section__body
+        .txt-1
+          | サンプルテキスト
+    .section__item
+      .section__head
+        | .txt-2 remとvw fluid-font-size関数
+      .section__body
+        .txt-2
+          | サンプルテキスト
+    .section__item
+      .section__head
+        | .txt-3 remとvw css変数
+      .section__body
+        .txt-3
+          | サンプルテキスト
+    .section__item
+      .section__head
+        | .txt-4 remとvw fluid-font-size関数、拡大縮小率が等倍より小さいと拡大される
+      .section__body
+        .txt-4
+          | サンプルテキスト
